@@ -6,13 +6,13 @@ const arr = ["home","about","skills","work","contact"]
 
 const Navbar = () => {
   return (
-    <nav>
-      <div>
+    <nav className='app__navbar'>
+      <div className='app__navbar-logo'>
         <img src={images.logo} alt="logo" />
       </div>
-      <ul>
+      <ul className='app__navbar-links'>
         {arr.map(item => (
-          <li key= {`link-${item}`}>
+          <li className='app__flex p-text' key= {`link-${item}`}>
             <div />
             <a href= { `#${item}`}>{item}</a>
           </li>
