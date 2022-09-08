@@ -20,7 +20,7 @@ const Header = () => {
       {/* motion div1 */}
       <motion.div
         whileInView={{ x: [-100, 0], opacity: [0, 1] }}
-        transition={{ duration: 4 }}
+        transition={{ duration: 2 }}
       >
         <div className="app__header-badge">
           <div className="badge-cmp app__flex">
@@ -42,7 +42,7 @@ const Header = () => {
       <motion.div
         whileInView={{ opacity: [0, 1] }}
         transition={{ duration: 0.5, delayChildren: 0.5 }}
-        className="app__head-img"
+        className="app__header-img"
       >
         {/* 1,profile image */}
         <img src={images.profile} alt="profile_bg" />
@@ -50,7 +50,7 @@ const Header = () => {
         <motion.img
           whileInView={{ scale: [0, 1] }}
           transition={{ duration: 0.5, ease: "easeInOut" }}
-          src={images.circle}
+          src={images.vue}
           className="overlay-circle"
         />
       </motion.div>
