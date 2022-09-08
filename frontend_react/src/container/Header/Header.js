@@ -16,7 +16,7 @@ const scaleVariants = {
 };
 const Header = () => {
   return (
-    <div className="app__header app__flex">
+    <div id="home" className="app__header app__flex">
       {/* motion div1 */}
       <motion.div
         whileInView={{ x: [-100, 0], opacity: [0, 1] }}
@@ -37,7 +37,7 @@ const Header = () => {
           <p className="p-text"> Software Engineer</p>
         </div>
       </motion.div>
-      
+
       {/* motion div2 */}
       <motion.div
         whileInView={{ opacity: [0, 1] }}
