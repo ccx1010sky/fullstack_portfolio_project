@@ -1,3 +1,4 @@
+// main-div setup background
 #home {
   position: relative;
   background: url("../../assets/bgIMG.png");
@@ -12,7 +13,8 @@
   //     }
   //   }
 }
-
+// main-div  flex display
+// .app_flex applied
 .app__header {
   flex: 1;
   width: 100%;
@@ -30,6 +32,8 @@
     padding: 6rem 1rem 2rem;
   }
 }
+
+// motion div1
 .app__header-info {
   flex: 0.65;
   display: flex;
@@ -83,6 +87,38 @@
   }
 }
 
+// motion div2
+.app__header-img {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  position: relative;
+
+  img {
+    width: 100%;
+    object-fit: contain;
+    z-index: 1;
+  }
+
+  .overlay-circle {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    width: 100%;
+    height: 90%;
+  }
+
+  @media screen and (max-width: 1200px) {
+    margin: 2rem 0;
+  }
+}
+
+
+// motion div3
 .app__header-circles {
   flex: 0.75;
   display: flex;
@@ -144,32 +180,3 @@
   }
 }
 
-.app__header-img {
-  flex: 1;
-  height: 100%;
-
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  position: relative;
-
-  img {
-    width: 100%;
-    object-fit: contain;
-    z-index: 1;
-  }
-
-  .overlay-circle {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 0;
-    width: 100%;
-    height: 90%;
-  }
-
-  @media screen and (max-width: 1200px) {
-    margin: 2rem 0;
-  }
-}

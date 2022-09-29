@@ -29,6 +29,7 @@ const Navbar = () => {
 
       {/* 3, menu */}
       <div className="app__navbar-menu">
+        {/* HiMenuAlt4中的svg图标 */}
         <HiMenuAlt4 onClick={() => setToggle(true)} />
 
         {toggle && (
@@ -36,6 +37,7 @@ const Navbar = () => {
             whileInView={{ x: [400, 0] }}
             transition={{ duration: 0.85, ease: "easeOut" }}
           >
+            {/* Hix中的svg图标 */}
             <HiX onClick={() => setToggle(false)} />
             <ul>
               {arr.map((item) => (
@@ -54,3 +56,6 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+
+
