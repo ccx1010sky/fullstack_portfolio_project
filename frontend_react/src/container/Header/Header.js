@@ -48,12 +48,12 @@ const Header = () => {
         {/* 1,profile image */}
         <img src={images.profile} alt="profile_bg" />
         {/* 2,motion circle image */}
-        <motion.img
+        {/* <motion.img
           whileInView={{ scale: [0, 1] }}
           transition={{ duration: 0.5, ease: "easeInOut" }}
           src={images.vue}
           className="overlay-circle"
-        />
+        /> */}
       </motion.div>
 
       {/* motion div3 */}
