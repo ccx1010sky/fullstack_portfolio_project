@@ -1,10 +1,12 @@
+
+// main-profiles box
 .app__profiles {
     display: flex;
     justify-content: center;
     align-items: flex-start;
     flex-wrap: wrap;
     margin-top: 2rem;
-   
+   //sub-profiles-box
     .app__profiles-item{
        
         width:190px;
@@ -20,6 +22,14 @@
         height:170px;
         border-radius: 15px;
         object-fit: cover;
+    }
+    @media screen and (min-width:2000px) {
+        width: 370px;
+        margin:2rem 4rem;
+        img{
+            height:320px;
+        }
+        
     }
 
 

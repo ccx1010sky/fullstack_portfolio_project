@@ -4,30 +4,47 @@ import { motion } from "framer-motion";
 import "./About.scss";
 import { images } from "../../constants";
 
-const abouts = [
-  {
-    title: "Front-end",
-    description: "I am a good front-end developer",
-    imgUrl: images.about01,
-  },
-  {
-    title: "Back-end",
-    description: "I am a good back-end developer",
-    imgUrl: images.about02,
-  },
-  {
-    title: "UI/UX",
-    description: "I am a good UI/UX designer",
-    imgUrl: images.about03,
-  },
-  {
-    title: "Full-Stack",
-    description: "I am a good Full-Stack developer",
-    imgUrl: images.about04,
-  },
-];
+// using sanity client to populate the data
+import {client, urlFor} from "../../client"
+
+//static data source
+// const abouts = [
+//   {
+//     title: "Front-end",
+//     description: "I am a good front-end developer",
+//     imgUrl: images.about01,
+//   },
+//   {
+//     title: "Back-end",
+//     description: "I am a good back-end developer",
+//     imgUrl: images.about02,
+//   },
+//   {
+//     title: "UI/UX",
+//     description: "I am a good UI/UX designer",
+//     imgUrl: images.about03,
+//   },
+//   {
+//     title: "Full-Stack",
+//     description: "I am a good Full-Stack developer",
+//     imgUrl: images.about04,
+//   },
+// ];
 
 const About = () => {
+
+ const [abouts, setAbouts] = useState([]);
+
+// run once to fetch the data from sanity CMS when loading
+// 固定写法
+ useEffect(() => {
+  const query = '*[_type == "abouts"]';
+  client.fetch(query)
+  .then((data) => setAbouts(data))
+}, [])
+
+
+
   return (
     <>
       <h2 className="head-text">
@@ -45,7 +62,7 @@ const About = () => {
             className="app__profiles-item"
             key={about.title + index}
           >
-            <img src={about.imgUrl} alt={about.title} />
+            <img src={urlFor(about.imgUrl)} alt={about.title} />
             <h2 className="bold-text" style={{ marginTop: 20 }}>
               {about.title}
             </h2>
