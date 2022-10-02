@@ -3,21 +3,21 @@ import NavigationDots from "../components/NavigationDots";
 import SocialMedia from "../components/SocialMedia";
 
 //Higher Order Component
-const AppWarp = (component, idName, classNames) => {
+const AppWrap = (Component, idName, classNames) => function bananaHOC() {
   return (
     <div id={idName} className={`app__container ${classNames}`}>
       <SocialMedia />
 
       <div className="app__wrapper  app_flex">
-        <component />
+        <Component />
         <div className="copyright">
           <p className="p-text">@ 2022 Nick</p>
           <p className="p-text">All Right Reserve</p>
         </div>
       </div>
-      <NavigationDots />
+      <NavigationDots active={idName}/>
     </div>
   );
 };
 
-export default AppWarp;
+export default AppWrap;

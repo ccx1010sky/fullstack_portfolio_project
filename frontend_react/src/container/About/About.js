@@ -6,6 +6,7 @@ import { images } from "../../constants";
 
 // using sanity client to populate the data
 import {client, urlFor} from "../../client"
+import AppWrap from "../../wrapper/AppWrap";
 
 //static data source
 // const abouts = [
@@ -47,6 +48,10 @@ const About = () => {
 
   return (
     <>
+    <br />
+    <br />
+    <br />
+    <br />
       <h2 className="head-text">
         I know that <span>Good Design</span>
         <br />
@@ -76,4 +81,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default AppWrap(About, 'about');

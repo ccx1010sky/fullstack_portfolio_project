@@ -1,4 +1,5 @@
 // main-div setup background
+// idName is set as header, passing to component AppWrap()
 #home {
   position: relative;
   background: url("../../assets/bgIMG.png");
@@ -20,7 +21,7 @@
   width: 100%;
   height: 100%;
   flex-direction: row;
-  padding: 7rem 2rem 0;
+  padding: 6rem 2rem 0;
 
   @media screen and (min-width: 2000px) {
     padding: 8rem;
@@ -28,22 +29,24 @@
   @media screen and (max-width: 1200px) {
     flex-direction: column;
   }
-  @media screen and (min-width: 450px) {
+  @media screen and (max-width: 450px) {
     padding: 6rem 1rem 2rem;
   }
 }
 
 // motion div1
 .app__header-info {
-  flex: 0.45;
+  flex: 0.65;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   height: 100%;
 
+  margin:0 2rem;
 
-  @media screen and (max-width: 2000px) {
+
+  @media screen and (max-width: 1200px) {
     width: 100%;
     margin-right: 0rem;
   }
@@ -56,18 +59,18 @@
   align-items: flex-end;
   flex-direction: column;
 
-  .badge-cmp, .tag-cmp {
-    margin-right: 2.5rem;
-    padding: 0.5rem 2rem;
+  .badge-cmp, 
+  .tag-cmp {
+    padding: 1rem  2rem;
     border: var(--white-color);
     border-radius: 15px;
     flex-direction: row;
     width: auto;
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   }
   .tag-cmp {
     flex-direction: column;
-    margin-top: 2rem;
+    margin-top: 3rem;
 
     p {
       width: 100%;
@@ -79,7 +82,7 @@
     font-size: 2.5rem;
 
     @media screen and (min-width: 2000px) {
-      font-size: 4rem;
+      font-size: 5rem;
     }
   }
   @media screen and (max-width: 1200px) {
@@ -87,6 +90,10 @@
     align-items: flex-start;
   }
 }
+
+
+
+
 
 // motion div2
 .app__header-img {
@@ -121,7 +128,7 @@
 
 // motion div3
 .app__header-circles {
-  flex: 0.75;
+  flex: 0.95;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -156,16 +163,16 @@
   }
   @media screen and (max-width: 2000px) {
     div:nth-child(2) {
-      width: 400px;
-      height: 400px;
-    }
-    div:nth-child(3) {
-      width: 170px;
-      height: 170px;
-    }
-    div:nth-child(1) {
       width: 200px;
       height: 200px;
+    }
+    div:nth-child(3) {
+      width: 120px;
+      height: 120px;
+    }
+    div:nth-child(1) {
+      width: 120px;
+      height: 120px;
     }
   }
 

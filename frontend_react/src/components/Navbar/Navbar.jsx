@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import "./Navbar.scss";
 import { images } from "../../constants";
 
-const arr = ["home", "about", "skills", "work", "contact"];
+const arr = ["home", "about", "work", "skills", "contact"];
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
