@@ -44,8 +44,6 @@ const About = () => {
   .then((data) => setAbouts(data))
 }, [])
 
-
-
   return (
     <div id="about">
       <h2 className="head-text">
@@ -76,5 +74,5 @@ const About = () => {
     </div>
   );
 };
-
+//call AppWrap() higher function component function, passing in component argument About,and inName argument 'about'
 export default AppWrap(About, 'about');
