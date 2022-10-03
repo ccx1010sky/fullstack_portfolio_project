@@ -1,4 +1,5 @@
 import React from 'react'
+import "./NavigationDots.scss"
 
 const NavigationDots = ({active}) => {
   return (
