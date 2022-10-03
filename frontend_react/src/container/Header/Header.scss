@@ -67,6 +67,12 @@
     flex-direction: row;
     width: auto;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+
+    &:hover {
+      background-color: rgba(136, 129, 164, 0.5);
+      transition:all 1s ease-out;
+      box-shadow: 2px 2px 10px 10px rgba(97, 72, 193, 0.5);
+    }
   }
   .tag-cmp {
     flex-direction: column;
@@ -76,6 +82,7 @@
       width: 100%;
       text-transform: uppercase;
       text-align: right;
+
     }
   }
   span {
