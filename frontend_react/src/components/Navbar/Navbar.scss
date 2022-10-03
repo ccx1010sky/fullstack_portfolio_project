@@ -27,6 +27,7 @@ nav{
   }
 }
 
+//nav-links disappear when screen smaller than 900px
 .app__navbar-links {
   flex: 1;
   display: flex;
@@ -64,11 +65,13 @@ nav{
       }
     }
   }
+  //nav-links disappear when screen smaller than 900px
   @media screen and (max-width: 900px) {
     display: none;
   }
 }
 
+//menu icon and menu-div  disappear when screen greater than 900px,
 .app__navbar-menu {
   width: 35px;
   height: 35px;
@@ -84,6 +87,7 @@ nav{
     height: 70%;
     color: var(--white-color);
   }
+  // menu-div
   div {
     position: fixed;
     top: 0;
@@ -91,7 +95,7 @@ nav{
     right: 0;
     z-index: 5;
     padding: 1rem;
-    width: 80%;
+    width: 400px;
     height: 100vh;
     display: flex;
     justify-content: flex-end;
@@ -147,7 +151,10 @@ nav{
 
   @media screen and (min-width: 900px ) {
         display: none;
+
         
     }
+
+ 
 
 }
