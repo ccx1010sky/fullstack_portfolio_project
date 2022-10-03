@@ -47,11 +47,7 @@ const About = () => {
 
 
   return (
-    <>
-    <br />
-    <br />
-    <br />
-    <br />
+    <div id="about">
       <h2 className="head-text">
         I know that <span>Good Design</span>
         <br />
@@ -77,7 +73,7 @@ const About = () => {
           </motion.div>
         ))}
       </div>
-    </>
+    </div>
   );
 };
 

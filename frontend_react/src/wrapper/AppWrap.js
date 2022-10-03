@@ -1,13 +1,13 @@
 import React from "react";
 import NavigationDots from "../components/NavigationDots";
 import SocialMedia from "../components/SocialMedia";
+import "./AppWrap.scss"
 
 //Higher Order Component
 const AppWrap = (Component, idName, classNames) => function bananaHOC() {
   return (
     <div id={idName} className={`app__container ${classNames}`}>
       <SocialMedia />
-
       <div className="app__wrapper  app_flex">
         <Component />
         <div className="copyright">
