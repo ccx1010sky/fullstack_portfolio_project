@@ -12,7 +12,7 @@ const AppWrap = (Component, idName, classNames) => function bananaHOC() {
         <Component />
         <div className="copyright">
           <p className="p-text">@ 2022 Nick</p>
-          <p className="p-text">All Right Reserve</p>
+          <p className="p-text">All Rights Reserve</p>
         </div>
       </div>
       <NavigationDots active={idName}/>

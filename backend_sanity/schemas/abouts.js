@@ -1,5 +1,6 @@
 
-
+// abouts is an array. abouts [about1, about2,about3]
+//about is object. about {title: 'xx', description:'xxx',imgUrl:'xxxx'}
 export default{
     name:'abouts',
     title:'Abouts',
