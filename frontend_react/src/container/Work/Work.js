@@ -12,13 +12,14 @@ const Work = () => {
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
 
   useEffect(() => {
-    const query = '*[_type = "works"]';
+    const query = '*[_type == "works"]';
     client.fetch(query).then((data) => {
       setWorks(data);
       setFilterWork(data);
     });
   }, []);
 
+  
   const worksArr = ["UI/UX", "Web App", "Mobile App", "ReactJS", "All"];
 
   const handleWorkFilter = (item) => {
@@ -41,11 +42,12 @@ const Work = () => {
   return (
     <div className="app__work app__flex">
       {/* display content row */}
+      {/* 1 */}
       <h2>
         My Creative <span>Portfolio</span> Section
       </h2>
-
-      <div className="app__work-filter">
+      {/* 2 */}
+      <div className="app__work-filter  app__flex">
         {worksArr.map((item, index) => (
           <div
             className={`app__work-filter-item  app__flex p-text ${
@@ -58,12 +60,23 @@ const Work = () => {
           </div>
         ))}
       </div>
-
-      <div className="app__pic">
+      {/* 3 */}
+      <motion.div
+        animate={animateCard}
+        transition={{ duration: 0.5, delayChildren: 0.5 }}
+        className="app__work-portfolio"
+      >
         {filterWork.map((work, index) => (
           <div>
             <div>
-              <img src={urlFor(work.ImgUrl)} atl={work.name} />
+              <img src={urlFor(work.imgUrl)} atl={work.name} />
+              <motion.div>
+
+                <a href="">{AiFillEye}</a>
+
+
+                <a href="">{AiFillGithub}</a>
+              </motion.div>
             </div>
 
             <div>
@@ -75,7 +88,7 @@ const Work = () => {
             </div>
           </div>
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 };
