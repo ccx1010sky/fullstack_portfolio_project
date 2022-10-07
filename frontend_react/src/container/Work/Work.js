@@ -3,6 +3,7 @@ import { AiFillEye, AiFillGithub } from "react-icons/ai";
 import { motion } from "framer-motion";
 import { urlFor, client } from "../../client";
 import AppWrap from "../../wrapper/AppWrap";
+import MotionWrap from "../../wrapper/MotionWrap";
 import "./Work.scss";
 
 const Work = () => {
@@ -42,7 +43,7 @@ const Work = () => {
 
   return (
     // 0
-    <div className="app__work app__flex">
+    <div className="app__works app__flex">
       {/* 1 */}
       <h2 className="head-text">
         My Creative <span>Portfolio</span> Section
@@ -128,4 +129,4 @@ const Work = () => {
   );
 };
 
-export default Work;
+export default AppWrap(MotionWrap(Work,'app__works'),'work',"app__primarybg");
