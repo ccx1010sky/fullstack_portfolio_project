@@ -7,6 +7,8 @@ import { images } from "../../constants";
 // using sanity client to populate the data
 import {client, urlFor} from "../../client"
 import AppWrap from "../../wrapper/AppWrap";
+import MotionWrap from "../../wrapper/MotionWrap";
+
 
 //static data source
 // const abouts = [
@@ -45,7 +47,7 @@ const About = () => {
 }, [])
 
   return (
-    <div id="about">
+    <div>
       <h2 className="head-text">
         I know that <span>Good Design</span>
         <br />
@@ -75,4 +77,8 @@ const About = () => {
   );
 };
 //call AppWrap() higher function component function, passing in component argument About,and inName argument 'about'
-export default AppWrap(About, 'about');
+export default AppWrap(
+  MotionWrap(About, "app__about"),
+  "about",
+  "app__whitebg"
+);
