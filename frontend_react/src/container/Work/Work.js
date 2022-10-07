@@ -20,12 +20,13 @@ const Work = () => {
     });
   }, []);
 
-  const worksArr = ["UI/UX", "Web App", "Mobile App", "ReactJs", "All"];
+  //数组层级：folder->item->work
+  const folderArr = ["Full-Stack", "Web App", "Mobile App", "ReactJs", "Python","Java","All"];
 
   const handleWorkFilter = (item) => {
     setActiveFilter(item);
 
-    // setTimeout( ()=>{ },500)
+    // setTimeout( ()=>{ },500)0
     setTimeout(() => {
       setAnimateCard([{ y: 100, opacity: 1 }]);
 
@@ -52,7 +53,8 @@ const Work = () => {
 
       {/* 2 */}
       <div className="app__work-filter">
-        {worksArr.map((item, index) => (
+        {/* list out all the folder's item. */}
+        {folderArr.map((item, index) => (
           <div
             className={`app__work-filter-item  app__flex p-text ${
               activeFilter === item ? "item-active" : ""
@@ -81,13 +83,13 @@ const Work = () => {
 
               <motion.div
                 whileHover={{ opacity: [0, 1] }}
-                transition={{duration: 0.25,ease: "easeInOut",
-                staggerChildren: 0.5
+                transition={{
+                  duration: 0.25,
+                  ease: "easeInOut",
+                  staggerChildren: 0.5,
                 }}
                 className="app__work-hover app__flex"
               >
-
-                
                 <a href={work.projectLink} target="_blank" rel="noreferrer">
                   <motion.div
                     whileInView={{ scale: [0, 1] }}
@@ -95,7 +97,7 @@ const Work = () => {
                     transition={{ duration: 0.25 }}
                     className="app__flex"
                   >
-                    <AiFillEye/>
+                    <AiFillEye />
                   </motion.div>
                 </a>
                 <a href={work.codeLink} target="_blank" rel="noreferrer">
@@ -105,7 +107,7 @@ const Work = () => {
                     transition={{ duration: 0.25 }}
                     className="app__flex"
                   >
-                    <AiFillGithub/>
+                    <AiFillGithub />
                   </motion.div>
                 </a>
               </motion.div>
