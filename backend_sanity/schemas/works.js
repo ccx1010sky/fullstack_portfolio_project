@@ -1,6 +1,6 @@
 
-// 举例：works is an array. abouts [about1, about2,about3]
-// 举例：work is object. about {title: 'xx', description:'xxx',projectLink:'xxxx2',codeLink:'xxx1'，imgUrl:'xxxx'，tags:'xxxxx1'}
+// 举例：works is an array. works [work1, work2,work3]
+// 举例：work is object. work {title: 'xx', description:'xxx',projectLink:'xxxx2',codeLink:'xxx1'，imgUrl:'xxxx'，tags:'xxxxx1'}
 export default {
   name: "works",
   title: "Works",
