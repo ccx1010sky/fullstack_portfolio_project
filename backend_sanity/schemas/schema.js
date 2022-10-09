@@ -6,6 +6,10 @@ import schemaTypes from 'all:part:@sanity/base/schema-type'
 import testimonials from './testimonials'
 import abouts from './abouts'
 import works from './works'
+import skills from './skills'
+import experiences from './experiences'
+import workExperiences from './workExperiences'
+
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -16,7 +20,10 @@ export default createSchema({
   types: schemaTypes.concat([
      testimonials,
      abouts,
-     works
-
+     works,
+     skills,
+     experiences,
+     workExperiences
+     
   ]),
 })
