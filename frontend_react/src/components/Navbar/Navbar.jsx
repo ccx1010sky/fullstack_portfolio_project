@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import "./Navbar.scss";
 import { images } from "../../constants";
 
-const arr = ["home", "about", "work", "skills", "contact"];
+const arr = ["home", "about", "work", "skills"];
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
@@ -56,6 +56,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-
-
