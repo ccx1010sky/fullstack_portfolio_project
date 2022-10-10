@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from "react";
 import "./Skills.scss";
 import { urlFor, client } from "../../client";
@@ -16,10 +17,17 @@ const Skills = () => {
     });
   }, []);
 
+=======
+import React from 'react'
+import "./Skills.scss"
+const Skills = () => {
+>>>>>>> parent of 14476541 (skills.js to display the page)
   return (
-    <div className="app__skills">
-      <h2 className="head-text"> Work & Experience</h2>
+    <div>Skills</div>
+  )
+}
 
+<<<<<<< HEAD
       <div className="app__skills-container">
         <div className="app__skills-list app__flex">
           {skills.map((skill, index) => (
@@ -50,3 +58,6 @@ const Skills = () => {
 };
           
 export default Skills;
+=======
+export default Skills
+>>>>>>> parent of 14476541 (skills.js to display the page)
