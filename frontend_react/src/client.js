@@ -7,12 +7,12 @@ import imageUrlBuilder from '@sanity/image-url';
 // add CORS origin as http://localhost:3000
 // generate token from  Tokens
 export const client = sanityClient({
-  projectId: process.env.REACT_APP_SANITY_PROJECT_ID,
+  projectId: ehhe73j6,
   dataset: "production",
   apiVersion: "2022-02-01",
   useCdn: true,
-  token:process.env.REACT_APP_SANITY_TOKEN,
-})
+  token: process.env.REACT_APP_SANITY_TOKEN,
+});
 
 
 const builder = imageUrlBuilder(client);
