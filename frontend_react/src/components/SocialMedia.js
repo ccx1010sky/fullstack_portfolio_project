@@ -8,13 +8,20 @@ const SocialMedia = () => {
   return (
     <div className="app__social">
       <div>
-        <BsTwitter />
+        <a href="https://twitter.com/" target="_blank">
+          <BsTwitter />
+        </a>
       </div>
       <div>
-        <FaFacebook />
+        <a href="https://www.facebook.com/" target="_blank">
+          <FaFacebook />
+        </a>
       </div>
       <div>
-        <a href="https://www.linkedin.com/in/nick-chenxi-c-541868158/details/skills/">
+        <a
+          href="https://www.linkedin.com/in/nick-chenxi-c-541868158/details/skills/"
+          target="_blank"
+        >
           <FaLinkedin />
         </a>
       </div>
