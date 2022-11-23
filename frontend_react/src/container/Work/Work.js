@@ -21,7 +21,7 @@ const Work = () => {
   }, []);
 
   //数组层级：folder->item->work
-  const folderArr = ["Full-Stack", "Web App", "Mobile App", "ReactJs", "Python","Java","All"];
+  const folderArr = ["Full-Stack", "Web App", "Mobile App", "ReactJs", "Python","Java","Springboot","Angular","AWS","TypeScript","ReactNative","All"];
 
   const handleWorkFilter = (item) => {
     setActiveFilter(item);
