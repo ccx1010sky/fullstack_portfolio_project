@@ -88,7 +88,7 @@ const Skills = () => {
     </>
   );
 };
-
+//call AppWrap() higher function component function, passing in component argument Skills
 export default AppWrap(
   MotionWrap(Skills, 'app__skills'),
   'skills',
